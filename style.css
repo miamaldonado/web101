@@ -1,0 +1,240 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.header,
+.footer {
+  background-color: #eee;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* Enhancements for navigation */
+.navbar ul {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #000;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 40px
+
+}
+
+.section h2 {
+  margin-bottom: 15px;
+  color: #316e9c;
+}
+
+.section p,
+.section a.btn {
+  margin-bottom: 10px;
+}
+
+/* Button Styling */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #367B37;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .header,
+.dark-mode .footer {
+  background-color: #222;
+  color: #fff;
+}
+
+.dark-mode .navbar ul li a {
+  color: #fff;
+}
+
+/* Form Styling */
+#sign-petition {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#sign-petition label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#sign-petition input[type="text"],
+#sign-petition input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#sign-petition button[type="submit"] {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Adjustments for Dark Mode */
+.dark-mode #sign-petition {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode #sign-petition input[type="text"],
+.dark-mode #sign-petition input[type="email"] {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.resource-btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.resource-btn:hover {
+  background-color: #367B37;
+}
+
+.resources-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.resources-section li {
+  margin-bottom: 10px;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background: pink;
+}
+
+/*animation*/
+
+.revealable {
+    position: relative;
+    transform: translateY(150px); /* Start the element 150px lower than its final position */
+    opacity: 0; /* Start the element as invisible */
+    transition: all 2s ease; /* Animate all transformable properties over 2 seconds with an 'ease' timing function */
+}
+.active {
+    transform: translateY(0px); /* Move the element to its final position */
+    opacity: 1; /* Make the element fully visible */
+}
+.navbar {
+    position: relative; /* Set position to relative or fixed, depending on your layout needs */
+    z-index: 1000; /* Higher than any other element on the page */
+}
+
+/* The modal that covers the background and prevents user interactions */
+.modal {
+  display: none; /* Hides the modal from view by default */
+  position: fixed; /* Keeps the modal in one place */
+  z-index: 1000; /* High z-index to ensure it's above other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box that contains all the content and images */
+.modal-content {
+  background-color: #f1f1f1; /* Light background for the content */
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px; /* Larger text size for visibility */
+  color: black; /* Text color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Additional styling for text and images within the modal */
+#thanks-modal-content {
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto;
+}
+
+#close-modal-btn {
+  padding: 8px 16px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50; /* Green background */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#close-modal-btn:hover {
+  background-color: #45a049; /* Darker shade for hover */
+}
